@@ -10,8 +10,13 @@ describe Chop1 do
 	  it 'returns -1 if the array doesn\'t contain 3' do
 	    chopper = Chop1.new
 	    expect(chopper.chop(3,[1,2])).to eq -1
-
 	  end
+	context "when looking for the number 1"
+	  it 'returns 0 if the array only contains 1' do
+	    chopper = Chop1.new
+	    expect(chopper.chop(1,[1])).to eq 0
+	  end
+
 
 
 
