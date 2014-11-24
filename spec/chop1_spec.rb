@@ -1,11 +1,20 @@
 require 'chop1'
 
 describe Chop1 do 
+	context "when looking for the number 3"
+	  it 'returns -1 if the array is empty' do
+	    chopper = Chop1.new
+	    expect(chopper.chop(3,[])).to eq -1
+	  end
 
-  it 'returns -1 if the array is empty' do
-    chopper = Chop1.new
-    expect(chopper.chop(5,[])).to eq -1
-  end
+	  it 'returns -1 if the array doesn\'t contain 3' do
+	    chopper = Chop1.new
+	    expect(chopper.chop(3,[1,2])).to eq -1
+
+	  end
+
+
+
   
 end
 
